@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Euro‑Impex | Handel mięsem & Transport chłodniczy</title>
+  <meta name="description" content="Euro‑Impex — rodzinna firma z 25+ letnim doświadczeniem. Handel mięsem drobiowym, wołowym, wieprzowym oraz pet food. Organizacja transportu od producenta do klienta końcowego." />
+  <meta property="og:title" content="Euro‑Impex — Meat Trading & Cold‑Chain Transport" />
+  <meta property="og:description" content="Family‑run company (25+ years). Poultry, beef, pork, offals; carcass, trim, necks. End‑to‑end cold‑chain logistics." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#f7fafc" />
+  <style>
+    :root{
+      --bg:#f7fafc;      /* bardzo jasne tło */
+      --card:#ffffff;    /* karty */
+      --primary:#1f2937; /* grafitowy tekst */
+      --accent:#b91c1c;  /* akcent (delikatna czerwień – nawiązanie do branży mięsnej) */
+      --muted:#6b7280;   /* wtórny tekst */
+      --ring:#e5e7eb;    /* obwódki */
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:var(--bg);color:var(--primary)}
+    a{color:inherit;text-decoration:none}
+    header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--ring);z-index:50}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo-mark{width:44px;height:44px;border-radius:12px;background:conic-gradient(from 0deg,#fee2e2,#fecaca,#ffffff);position:relative;border:1px solid var(--ring);}
+    /* prosty placeholder elementu mięsnego – delikatny kształt skrzydła/udka */
+    .logo-mark:after{content:"";position:absolute;inset:8px;border-radius:20px 20px 12px 12px/22px 22px 10px 10px;background:linear-gradient(180deg,#fca5a5,#ffffff 80%);mix-blend-multiply;}
+    .brand{font-weight:800;letter-spacing:.2px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{padding:8px 10px;border-radius:10px}
+    nav a:hover{background:#f3f4f6}
+    .lang{display:flex;gap:8px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--ring);border-radius:12px;background:var(--card);cursor:pointer;font-weight:600}
+    .btn:hover{box-shadow:0 1px 0 rgba(0,0,0,.03)}
+    .hero{padding:56px 0 24px}
+    .hero h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 10px}
+    .hero p{color:var(--muted);font-size:clamp(16px,2.2vw,18px);margin:0}
+    .grid{display:grid;gap:18px}
+    @media(min-width:800px){.grid-2{grid-template-columns:1.2fr .8fr}}
+    section{padding:36px 0}
+    .card{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:20px}
+    h2{font-size:clamp(22px,3.2vw,28px);margin:0 0 12px}
+    h3{margin:12px 0 8px;font-size:18px}
+    .list{display:grid;gap:6px;margin:0;padding-left:18px}
+    .list li{margin:2px 0}
+    .pill{display:inline-block;background:#fee2e2;border:1px solid #fecaca;color:#7f1d1d;border-radius:999px;padding:6px 10px;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.6px}
+    footer{padding:28px 0 40px;color:var(--muted)}
+    .contact-card{display:grid;gap:10px}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:#f3f4f6;border:1px solid var(--ring);padding:2px 6px;border-radius:6px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <a class="logo" href="#top" aria-label="Home">
+        <div class="logo-mark" aria-hidden="true"></div>
+        <div class="brand">Euro‑Impex</div>
+      </a>
+      <nav>
+        <a href="#about" data-i18n="nav_about">O nas</a>
+        <a href="#offer" data-i18n="nav_offer">Oferta</a>
+        <a href="#contact" data-i18n="nav_contact">Dane kontaktowe</a>
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button class="btn" id="btn-pl" aria-pressed="true">PL</button>
+          <button class="btn" id="btn-en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <span class="pill" data-i18n="tag">Rodzinna firma · 25+ lat</span>
+      <h1 data-i18n="hero_title">Handel mięsem & transport chłodniczy</h1>
+      <p data-i18n="hero_sub">Poultry • Beef • Pork • Offals · Pełna obsługa łańcucha chłodniczego — od producenta do klienta końcowego.</p>
+    </section>
+
+    <section id="about" class="grid grid-2">
+      <div class="card">
+        <h2 data-i18n="about_h2">O nas</h2>
+        <p data-i18n="about_p1">Jacek Wawreczko Euro‑Impex to rodzinna, solidna firma z ponad 25‑letnim doświadczeniem. Współpracujemy z producentami w Polsce i za granicą, dostarczając mięso drobiowe, wołowe i wieprzowe oraz komponenty pet food.</p>
+        <p data-i18n="about_p2">Specjalizujemy się w asortymencie: <strong>Carcass</strong>, <strong>Trim</strong>, <strong>Necks</strong>, <strong>Offals</strong> — a także elementach, mięsie i podrobach zgodnie z potrzebami klienta.</p>
+      </div>
+      <div class="card" aria-label="Logo placeholder">
+        <h3 data-i18n="logo_h3">Miejsce na logo</h3>
+        <p data-i18n="logo_p">Wstaw tutaj plik <span class="kbd">logo.png</span> i podmień znacznik w nagłówku lub obok nazwy.</p>
+        <code>&lt;img src="logo.png" alt="Euro‑Impex" height="44" /&gt;</code>
+      </div>
+    </section>
+
+    <section id="offer">
+      <h2 data-i18n="offer_h2">Oferta</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3 data-i18n="trade_h3">Handel</h3>
+          <ul class="list">
+            <li data-i18n="trade_li1">Drób: tusze, elementy (filet, ćwiartki, skrzydła), necks, offals</li>
+            <li data-i18n="trade_li2">Wołowina: carcass, ćwierci, trim, offals</li>
+            <li data-i18n="trade_li3">Wieprzowina: części zasadnicze, trim, podroby</li>
+            <li data-i18n="trade_li4">Pet food: komponenty klasy pet food zgodnie z wymaganiami</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3 data-i18n="transport_h3">Transport</h3>
+          <ul class="list">
+            <li data-i18n="trans_li1">Organizacja łańcucha chłodniczego od producenta do klienta końcowego</li>
+            <li data-i18n="trans_li2">FTL / LTL, kraj &amp; eksport, dokumentacja i monitoring temperatur</li>
+            <li data-i18n="trans_li3">Dobór środków transportu, sloty załadunkowe, terminowe dostawy</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2 data-i18n="contact_h2">Dane kontaktowe</h2>
+      <div class="contact-card">
+        <div><strong>Jacek Wawreczko Euro‑Impex</strong></div>
+        <div data-i18n="addr">Polska · 33‑395 Chełmiec · ul. Gajowa 48a</div>
+        <div>
+          <span data-i18n="phone_label">Tel.</span> <a href="tel:+48694443225">+48 694 443 225</a>
+          &nbsp;·&nbsp;
+          Email: <a href="mailto:jacek@euroimpex.net.pl">jacek@euroimpex.net.pl</a>
+        </div>
+        <div data-i18n="hours">Kontakt od poniedziałku do piątku, 8:00–17:00 (CET).</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>&copy; <span id="y"></span> Euro‑Impex. <span data-i18n="rights">Wszelkie prawa zastrzeżone.</span></small>
+    </div>
+  </footer>
+
+  <script>
+    // Prosty przełącznik języka (PL/EN)
+    const dict = {
+      pl: {
+        nav_about:"O nas", nav_offer:"Oferta", nav_contact:"Dane kontaktowe",
+        tag:"Rodzinna firma · 25+ lat",
+        hero_title:"Handel mięsem & transport chłodniczy",
+        hero_sub:"Poultry • Beef • Pork • Offals · Pełna obsługa łańcucha chłodniczego — od producenta do klienta końcowego.",
+        about_h2:"O nas",
+        about_p1:"Jacek Wawreczko Euro‑Impex to rodzinna, solidna firma z ponad 25‑letnim doświadczeniem. Współpracujemy z producentami w Polsce i za granicą, dostarczając mięso drobiowe, wołowe i wieprzowe oraz komponenty pet food.",
+        about_p2:"Specjalizujemy się w asortymencie: Carcass, Trim, Necks, Offals — a także elementach, mięsie i podrobach zgodnie z potrzebami klienta.",
+        logo_h3:"Miejsce na logo", logo_p:"Wstaw tutaj plik logo.png i podmień znacznik w nagłówku lub obok nazwy.",
+        offer_h2:"Oferta",
+        trade_h3:"Handel",
+        trade_li1:"Drób: tusze, elementy (filet, ćwiartki, skrzydła), necks, offals",
+        trade_li2:"Wołowina: carcass, ćwierci, trim, offals",
+        trade_li3:"Wieprzowina: części zasadnicze, trim, podroby",
+        trade_li4:"Pet food: komponenty klasy pet food zgodnie z wymaganiami",
+        transport_h3:"Transport",
+        trans_li1:"Organizacja łańcucha chłodniczego od producenta do klienta końcowego",
+        trans_li2:"FTL / LTL, kraj & eksport, dokumentacja i monitoring temperatur",
+        trans_li3:"Dobór środków transportu, sloty załadunkowe, terminowe dostawy",
+        contact_h2:"Dane kontaktowe",
+        addr:"Polska · 33‑395 Chełmiec · ul. Gajowa 48a",
+        phone_label:"Tel.",
+        hours:"Kontakt od poniedziałku do piątku, 8:00–17:00 (CET).",
+        rights:"Wszelkie prawa zastrzeżone."
+      },
+      en: {
+        nav_about:"About", nav_offer:"Offer", nav_contact:"Contact",
+        tag:"Family‑run · 25+ years",
+        hero_title:"Meat trading & cold‑chain transport",
+        hero_sub:"Poultry • Beef • Pork • Offals · End‑to‑end cold chain — from producer to final customer.",
+        about_h2:"About us",
+        about_p1:"Jacek Wawreczko Euro‑Impex is a trustworthy, family‑run company with 25+ years of experience. We work with Polish and international producers, supplying poultry, beef and pork as well as pet‑food components.",
+        about_p2:"We specialise in: Carcass, Trim, Necks, Offals — plus cuts, meat and offal tailored to client needs.",
+        logo_h3:"Logo placeholder", logo_p:"Place your logo.png here and replace the tag in the header or next to the name.",
+        offer_h2:"Offer",
+        trade_h3:"Trading",
+        trade_li1:"Poultry: carcasses, cuts (breast, quarters, wings), necks, offals",
+        trade_li2:"Beef: carcass, quarters, trim, offals",
+        trade_li3:"Pork: prime cuts, trim, offals",
+        trade_li4:"Pet food: pet‑food grade components per requirements",
+        transport_h3:"Transport",
+        trans_li1:"Cold‑chain orchestration from producer to final customer",
+        trans_li2:"FTL / LTL, domestic & export, paperwork and temperature monitoring",
+        trans_li3:"Vehicle selection, loading slots, on‑time deliveries",
+        contact_h2:"Contact details",
+        addr:"Poland · 33‑395 Chełmiec · 48a Gajowa St.",
+        phone_label:"Phone",
+        hours:"Mon–Fri, 8:00–17:00 (CET).",
+        rights:"All rights reserved."
+      }
+    };
+
+    const elms = [...document.querySelectorAll('[data-i18n]')];
+    const btnPL = document.getElementById('btn-pl');
+    const btnEN = document.getElementById('btn-en');
+
+    function setLang(lang){
+      const map = dict[lang] || dict.pl;
+      elms.forEach(e=>{ const k=e.getAttribute('data-i18n'); if(map[k]) e.innerHTML = map[k]; });
+      document.documentElement.lang = lang === 'en' ? 'en' : 'pl';
+      btnPL.setAttribute('aria-pressed', lang==='pl');
+      btnEN.setAttribute('aria-pressed', lang==='en');
+      // aktualizacja tytułu i opisu
+      if(lang==='en'){
+        document.title = 'Euro‑Impex | Meat Trading & Cold‑Chain Transport';
+        document.querySelector('meta[name="description"]').setAttribute('content','Euro‑Impex — family‑run company (25+ years). Poultry, beef, pork and pet‑food components. Turn‑key logistics.');
+      } else {
+        document.title = 'Euro‑Impex | Handel mięsem & Transport chłodniczy';
+        document.querySelector('meta[name="description"]').setAttribute('content','Euro‑Impex — rodzinna firma z 25+ lat. Drób, wołowina, wieprzowina i pet food. Pełna obsługa transportu.');
+      }
+    }
+
+    btnPL.addEventListener('click', ()=>setLang('pl'));
+    btnEN.addEventListener('click', ()=>setLang('en'));
+
+    // rok w stopce
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // start domyślnie PL
+    setLang('pl');
+  </script>
+</body>
+</html>
